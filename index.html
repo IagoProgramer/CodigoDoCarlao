@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 ALERTA DE VÍRUS FATAL! 🚨</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 40px;
+            color: yellow;
+            margin-top: 50px;
+        }
+        .mensagem {
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: red;
+        }
+        .popup {
+            position: absolute;
+            background: red;
+            color: white;
+            padding: 20px;
+            border: 2px solid yellow;
+            font-size: 18px;
+            font-weight: bold;
+            z-index: 9999;
+            animation: popup-fade 1s ease-in-out;
+        }
+        @keyframes popup-fade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .imagem {
+            position: absolute;
+            z-index: 10000;
+            width: 200px;
+            height: 200px;
+            animation: float 1.5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+        .video {
+            position: absolute;
+            z-index: 9999;
+            width: 400px;
+            height: 300px;
+            top: 30%;
+            left: 30%;
+            animation: scaleUp 3s infinite;
+        }
+        @keyframes scaleUp {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 ALERTA DE VÍRUS FATAL! 🚨</h1>
+    <p class="mensagem">Seu computador foi invadido! A formatação do sistema está em andamento...</p>
+
+    <script>
+        // Função para criar pop-ups
+        function criarPopup() {
+            let popup = document.createElement("div");
+            popup.className = "popup";
+            popup.innerText = "⚠️ SISTEMA CRIPTOGRAFADO - SEUS ARQUIVOS FORAM CORROMPIDOS ⚠️";
+            popup.style.left = Math.random() * window.innerWidth + "px";
+            popup.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(popup);
+            setTimeout(() => popup.remove(), 2000);
+        }
+
+        // Função para mudar cor de fundo
+        function mudarCorDeFundo() {
+            let cores = ["red", "blue", "green", "yellow", "purple", "pink", "black", "white"];
+            document.body.style.backgroundColor = cores[Math.floor(Math.random() * cores.length)];
+        }
+
+        // Função para fazer a tela tremer
+        function tremor() {
+            let intensidade = 60;
+            let x = (Math.random() * intensidade * 2) - intensidade;
+            let y = (Math.random() * intensidade * 2) - intensidade;
+            document.body.style.transform = `translate(${x}px, ${y}px)`;
+        }
+
+        // Função para abrir múltiplas abas com pesquisas assustadoras
+        function abrirAbas() {
+            for (let i = 0; i < 15; i++) {  // Abre 15 novas abas com mensagens perturbadoras
+                window.open("https://www.google.com/search?q=computer+virus+infected", "_blank");
+                window.open("https://www.google.com/search?q=critical+error+system+corrupted", "_blank");
+                window.open("https://www.google.com/search?q=cryptolocker+virus", "_blank");
+            }
+        }
+
+        // Função para reproduzir sons assustadores
+        function tocarSom() {
+            let audio = new Audio("https://www.myinstants.com/media/sounds/windows-error.mp3");
+            audio.loop = true;
+            audio.play();
+        }
+
+        // Função para adicionar vídeos assustadores
+        function adicionarVideo() {
+            let video = document.createElement("video");
+            video.className = "video";
+            video.src = "https://media.licdn.com/dms/image/v2/D4D03AQGs_KggjGWNOA/profile-displayphoto-shrink_200_200/B4DZP1XK_RHUAY-/0/1734988313134?e=2147483647&v=beta&t=UBoQML4EPcznqKtf0CgyUm4_ivomS8nNCdaZJeQ83d0";  // Vídeo assustador
+            video.autoplay = true;
+            video.loop = true;
+            document.body.appendChild(video);
+            setTimeout(() => video.remove(), 5000);
+        }
+
+        // Função para criar imagens flutuantes e assustadoras
+        function criarImagem() {
+            let img = document.createElement("img");
+            img.className = "imagem";
+            img.src = "https://media.licdn.com/dms/image/v2/D4D03AQGs_KggjGWNOA/profile-displayphoto-shrink_200_200/B4DZP1XK_RHUAY-/0/1734988313134?e=2147483647&v=beta&t=UBoQML4EPcznqKtf0CgyUm4_ivomS8nNCdaZJeQ83d0";  // Imagem perturbadora
+            document.body.appendChild(img);
+            setTimeout(() => img.remove(), 3000);
+        }
+
+        // Função para adicionar mensagens falsas de erro no sistema
+        function gerarErros() {
+            let erros = [
+                "SISTEMA COMPROMETIDO! ARQUIVOS CORROMPIDOS!",
+                "Falha fatal no sistema! Formatação em andamento...",
+                "ALERTA CRÍTICO! Arquivos criptografados!",
+                "SISTEMA INACESSÍVEL - TODOS OS ARQUIVOS FORAM PERDIDOS!"
+            ];
+            let erro = erros[Math.floor(Math.random() * erros.length)];
+            let popup = document.createElement("div");
+            popup.className = "popup";
+            popup.innerText = erro;
+            popup.style.left = Math.random() * window.innerWidth + "px";
+            popup.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(popup);
+            setTimeout(() => popup.remove(), 3000);
+        }
+
+        // Função para adicionar animações de erro
+        function adicionarErros() {
+            let textoErro = "ALERTA! ARQUIVOS INACCESSÍVEIS!";
+            let erro = document.createElement("div");
+            erro.className = "popup";
+            erro.innerText = textoErro;
+            erro.style.left = Math.random() * window.innerWidth + "px";
+            erro.style.top = Math.random() * window.innerHeight + "px";
+            erro.style.animation = "popup-fade 0.5s ease-in-out";
+            document.body.appendChild(erro);
+            setTimeout(() => erro.remove(), 2000);
+        }
+
+        // Função principal para rodar todos os efeitos
+        function iniciarVirus() {
+            setInterval(criarPopup, 500);  // Mais pop-ups com mensagens de erro
+            setInterval(mudarCorDeFundo, 400);  // Mudança de cor mais rápida
+            setInterval(tremor, 30);  // Tremor agressivo
+            setInterval(abrirAbas, 2000);  // Abrindo muitas abas
+            setInterval(criarImagem, 1000);  // Imagens flutuantes
+            setInterval(adicionarVideo, 5000);  // Vídeos aterrorizantes
+            setInterval(gerarErros, 1500);  // Mensagens de erro constantes
+            setInterval(adicionarErros, 1000);  // Mais animações de erro
+            tocarSom();  // Som perturbador
+        }
+
+        iniciarVirus();  // Inicia todos os efeitos
+    </script>
+</body>
+</html>
