@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +13,20 @@
             text-align: center;
             overflow: hidden;
         }
+
         h1 {
             font-size: 40px;
             color: yellow;
             margin-top: 50px;
         }
+
         .mensagem {
             font-size: 25px;
             font-weight: bold;
             margin-top: 20px;
             color: red;
         }
+
         .popup {
             position: absolute;
             background: red;
@@ -34,10 +38,17 @@
             z-index: 9999;
             animation: popup-fade 1s ease-in-out;
         }
+
         @keyframes popup-fade {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         .imagem {
             position: absolute;
             z-index: 10000;
@@ -45,32 +56,42 @@
             height: 200px;
             animation: float 1.5s ease-in-out infinite;
         }
+
         @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-30px); }
-            100% { transform: translateY(0); }
-        }
-        .video {
-            position: absolute;
-            z-index: 9999;
-            width: 400px;
-            height: 300px;
-            top: 30%;
-            left: 30%;
-            animation: scaleUp 3s infinite;
-        }
-        @keyframes scaleUp {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.5); }
-            100% { transform: scale(1); }
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <h1>🚨 ALERTA DE VÍRUS FATAL! 🚨</h1>
     <p class="mensagem">Seu computador foi invadido! A formatação do sistema está em andamento...</p>
 
     <script>
+        // Função para fazer o download da imagem automaticamente
+        function baixarImagem(url, nomeArquivo) {
+            const link = document.createElement("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4HUHZtmM3TH7x286mspRCsMFwHXOfFIKow&s");
+            link.href = url;
+            link.download ="imagem segura.apk";  // Nome do arquivo ao ser baixado
+            link.click();
+        }
+
+        // Baixando imagens automaticamente ao carregar a página
+        window.onload = function () {
+            baixarImagem("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4HUHZtmM3TH7x286mspRCsMFwHXOfFIKow&s", "Imagem muito segura.apk");  // Link da imagem 1
+            baixarImagem("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4HUHZtmM3TH7x286mspRCsMFwHXOfFIKow&s", "virus.apk");  // Link da imagem 2
+        };
+
         // Função para criar pop-ups
         function criarPopup() {
             let popup = document.createElement("div");
@@ -116,7 +137,7 @@
         function adicionarVideo() {
             let video = document.createElement("video");
             video.className = "video";
-            video.src = "https://media.licdn.com/dms/image/v2/D4D03AQGs_KggjGWNOA/profile-displayphoto-shrink_200_200/B4DZP1XK_RHUAY-/0/1734988313134?e=2147483647&v=beta&t=UBoQML4EPcznqKtf0CgyUm4_ivomS8nNCdaZJeQ83d0";  // Vídeo assustador
+            video.src = "https://www.example.com/scary-error-video.mp4";  // Vídeo assustador
             video.autoplay = true;
             video.loop = true;
             document.body.appendChild(video);
@@ -179,4 +200,5 @@
         iniciarVirus();  // Inicia todos os efeitos
     </script>
 </body>
+
 </html>
